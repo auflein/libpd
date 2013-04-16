@@ -16,6 +16,7 @@
 #include "m_imp.h"
 #include <stdlib.h>
 #include <stdarg.h>
+#include <Accelerate/Accelerate.h>
 
 extern t_class *vinlet_class, *voutlet_class, *canvas_class;
 t_float *obj_findsignalscalar(t_object *x, int m);
@@ -49,6 +50,8 @@ t_int *zero_perf8(t_int *w)
     t_sample *out = (t_sample *)(w[1]);
     int n = (int)(w[2]);
     
+    vDSP_vclr(out, 1, n);
+    /*
     for (; n; n -= 8, out += 8)
     {
         out[0] = 0;
@@ -60,6 +63,7 @@ t_int *zero_perf8(t_int *w)
         out[6] = 0;
         out[7] = 0;
     }
+     */
     return (w+3);
 }
 

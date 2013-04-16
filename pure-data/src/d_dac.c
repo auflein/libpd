@@ -7,6 +7,7 @@
 
 #include "m_pd.h"
 #include "s_stuff.h"
+#include <Accelerate/Accelerate.h>
 
 /* ----------------------------- dac~ --------------------------- */
 static t_class *dac_class;

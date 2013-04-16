@@ -191,6 +191,17 @@
 		5828C8B51409C8C600F8B9AC /* PdDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 5828C8B31409C8C600F8B9AC /* PdDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5828C8B61409C8C600F8B9AC /* PdDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5828C8B41409C8C600F8B9AC /* PdDispatcher.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		C286BB7716FD39B800662FDC /* vexp.h in Headers */ = {isa = PBXBuildFile; fileRef = C286BB7216FD39B800662FDC /* vexp.h */; };
+		C286BB7816FD39B800662FDC /* vexp.h in Headers */ = {isa = PBXBuildFile; fileRef = C286BB7216FD39B800662FDC /* vexp.h */; };
+		C286BB7916FD39B800662FDC /* vexp.c in Sources */ = {isa = PBXBuildFile; fileRef = C286BB7316FD39B800662FDC /* vexp.c */; };
+		C286BB7A16FD39B800662FDC /* vexp.c in Sources */ = {isa = PBXBuildFile; fileRef = C286BB7316FD39B800662FDC /* vexp.c */; };
+		C286BB7B16FD39B800662FDC /* vexp_if.c in Sources */ = {isa = PBXBuildFile; fileRef = C286BB7416FD39B800662FDC /* vexp_if.c */; };
+		C286BB7C16FD39B800662FDC /* vexp_if.c in Sources */ = {isa = PBXBuildFile; fileRef = C286BB7416FD39B800662FDC /* vexp_if.c */; };
+		C286BB7D16FD39B800662FDC /* vexp_fun.c in Sources */ = {isa = PBXBuildFile; fileRef = C286BB7516FD39B800662FDC /* vexp_fun.c */; };
+		C286BB7E16FD39B800662FDC /* vexp_fun.c in Sources */ = {isa = PBXBuildFile; fileRef = C286BB7516FD39B800662FDC /* vexp_fun.c */; };
+		C286BB7F16FD39B800662FDC /* fts_to_pd.h in Headers */ = {isa = PBXBuildFile; fileRef = C286BB7616FD39B800662FDC /* fts_to_pd.h */; };
+		C286BB8016FD39B800662FDC /* fts_to_pd.h in Headers */ = {isa = PBXBuildFile; fileRef = C286BB7616FD39B800662FDC /* fts_to_pd.h */; };
+		C2936116170AE65700F7405B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2936115170AE65700F7405B /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -302,6 +313,12 @@
 		5828C8B31409C8C600F8B9AC /* PdDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PdDispatcher.h; sourceTree = "<group>"; };
 		5828C8B41409C8C600F8B9AC /* PdDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PdDispatcher.m; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C286BB7216FD39B800662FDC /* vexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vexp.h; sourceTree = "<group>"; };
+		C286BB7316FD39B800662FDC /* vexp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vexp.c; sourceTree = "<group>"; };
+		C286BB7416FD39B800662FDC /* vexp_if.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vexp_if.c; sourceTree = "<group>"; };
+		C286BB7516FD39B800662FDC /* vexp_fun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vexp_fun.c; sourceTree = "<group>"; };
+		C286BB7616FD39B800662FDC /* fts_to_pd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fts_to_pd.h; sourceTree = "<group>"; };
+		C2936115170AE65700F7405B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 		D2AAC07E0554694100DB518D /* libpd-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libpd-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -318,6 +335,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2936116170AE65700F7405B /* Accelerate.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +355,11 @@
 		0867D691FE84028FC02AAC07 /* libpd */ = {
 			isa = PBXGroup;
 			children = (
+				C286BB7216FD39B800662FDC /* vexp.h */,
+				C286BB7316FD39B800662FDC /* vexp.c */,
+				C286BB7416FD39B800662FDC /* vexp_if.c */,
+				C286BB7516FD39B800662FDC /* vexp_fun.c */,
+				C286BB7616FD39B800662FDC /* fts_to_pd.h */,
 				0E82A0A712EEFE5E0053280E /* objc */,
 				11A026E014BAA414002FC756 /* cpp */,
 				0E82A08F12EEFE050053280E /* libpd_wrapper */,
@@ -350,6 +373,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2936115170AE65700F7405B /* Accelerate.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -529,6 +553,8 @@
 				306DBE6316BC6710007CF226 /* z_queued.h in Headers */,
 				3088883116BCB4A400781682 /* z_hook_util.h in Headers */,
 				3088883516BCB4A400781682 /* z_print_util.h in Headers */,
+				C286BB7816FD39B800662FDC /* vexp.h in Headers */,
+				C286BB8016FD39B800662FDC /* fts_to_pd.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +573,8 @@
 				306DBE6216BC6710007CF226 /* z_queued.h in Headers */,
 				3088883016BCB4A400781682 /* z_hook_util.h in Headers */,
 				3088883416BCB4A400781682 /* z_print_util.h in Headers */,
+				C286BB7716FD39B800662FDC /* vexp.h in Headers */,
+				C286BB7F16FD39B800662FDC /* fts_to_pd.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,7 +621,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "libpd" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -701,6 +729,9 @@
 				306DBE6116BC6710007CF226 /* z_queued.c in Sources */,
 				3088882F16BCB4A400781682 /* z_hook_util.c in Sources */,
 				3088883316BCB4A400781682 /* z_print_util.c in Sources */,
+				C286BB7A16FD39B800662FDC /* vexp.c in Sources */,
+				C286BB7C16FD39B800662FDC /* vexp_if.c in Sources */,
+				C286BB7E16FD39B800662FDC /* vexp_fun.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,6 +822,9 @@
 				306DBE6016BC6710007CF226 /* z_queued.c in Sources */,
 				3088882E16BCB4A400781682 /* z_hook_util.c in Sources */,
 				3088883216BCB4A400781682 /* z_print_util.c in Sources */,
+				C286BB7916FD39B800662FDC /* vexp.c in Sources */,
+				C286BB7B16FD39B800662FDC /* vexp_if.c in Sources */,
+				C286BB7D16FD39B800662FDC /* vexp_fun.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,6 +836,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/libpd.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -820,6 +855,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = /tmp/libpd.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
