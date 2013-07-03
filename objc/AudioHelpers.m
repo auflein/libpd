@@ -17,6 +17,8 @@
 
 NSString *AVStatusCodeAsString(OSStatus status) {
 	switch (status) {
+#if TARGET_OS_MAC
+#else
 		case kAudioSessionNoError:
 			return @"kAudioSessionNoError";
 		case kAudioSessionNotInitialized:
@@ -39,6 +41,7 @@ NSString *AVStatusCodeAsString(OSStatus status) {
 			return @"kAudioSessionUnspecifiedError";
 		case UNDEFINED_BAD_CATEGORY_ERROR:
 			return [NSString stringWithFormat:@"unknown error code %ld, but known to be related to a bad audio session category setting", status];
+#endif
 		default:
 			return [NSString stringWithFormat:@"unknown error code %ld", status];
 	}

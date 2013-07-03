@@ -201,6 +201,8 @@
 		C286BB7E16FD39B800662FDC /* vexp_fun.c in Sources */ = {isa = PBXBuildFile; fileRef = C286BB7516FD39B800662FDC /* vexp_fun.c */; };
 		C286BB7F16FD39B800662FDC /* fts_to_pd.h in Headers */ = {isa = PBXBuildFile; fileRef = C286BB7616FD39B800662FDC /* fts_to_pd.h */; };
 		C286BB8016FD39B800662FDC /* fts_to_pd.h in Headers */ = {isa = PBXBuildFile; fileRef = C286BB7616FD39B800662FDC /* fts_to_pd.h */; };
+		C2870EBC1784219C00A4AC7A /* PdAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 110E6DD3147B838F00282ABC /* PdAudioUnit.m */; };
+		C2870EBD1784220900A4AC7A /* AudioHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 110E6DCF147B838E00282ABC /* AudioHelpers.m */; };
 		C2936116170AE65700F7405B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2936115170AE65700F7405B /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
@@ -711,6 +713,7 @@
 				119013931486450C00086F19 /* x_gui.c in Sources */,
 				119013941486450C00086F19 /* x_interface.c in Sources */,
 				119013951486450C00086F19 /* x_list.c in Sources */,
+				C2870EBC1784219C00A4AC7A /* PdAudioUnit.m in Sources */,
 				119013961486450C00086F19 /* x_midi.c in Sources */,
 				119013971486450C00086F19 /* x_misc.c in Sources */,
 				119013981486450C00086F19 /* x_net.c in Sources */,
@@ -725,6 +728,7 @@
 				11A026E914BAA414002FC756 /* PdBase.cpp in Sources */,
 				11A026F114BAA414002FC756 /* PdTypes.cpp in Sources */,
 				30E9358916ADA07E009BFE25 /* PdMidiDispatcher.m in Sources */,
+				C2870EBD1784220900A4AC7A /* AudioHelpers.m in Sources */,
 				306DBE5916BC6710007CF226 /* ringbuffer.c in Sources */,
 				306DBE6116BC6710007CF226 /* z_queued.c in Sources */,
 				3088882F16BCB4A400781682 /* z_hook_util.c in Sources */,
