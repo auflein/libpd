@@ -43,7 +43,7 @@
         [globalSession setActive:YES error:&error];
         AU_LOG_IF_ERROR(error, @"Audio Session activation failed");
         AU_LOGV(@"Audio Session initialized");
-        self.audioUnit = [[[PdAudioUnit alloc] init] autorelease];
+        self.audioUnit = [[PdAudioUnit alloc] init];
 	}
 	return self;
 }
@@ -64,7 +64,6 @@
 
 - (void)dealloc {
 	self.audioUnit = nil;
-	[super dealloc];
 }
 
 - (PdAudioStatus)configurePlaybackWithSampleRate:(int)sampleRate

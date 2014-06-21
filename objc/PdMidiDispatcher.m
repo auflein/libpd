@@ -23,8 +23,6 @@
 
 - (void)dealloc {
   [listenerMap removeAllObjects];
-  [listenerMap release];
-  [super dealloc];
 }
 
 - (int)addListener:(NSObject<PdListener> *)listener forChannel: (int)channel {
@@ -32,7 +30,6 @@
   if (!listeners) {
     listeners = [[NSMutableArray alloc] init];
     [listenerMap setObject:listeners forKey:[NSNumber numberWithInt:channel]];
-    [listeners release];
   }
   [listeners addObject:listener];
   return 0;

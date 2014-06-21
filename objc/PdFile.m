@@ -35,7 +35,7 @@
 #pragma mark - Class Open method
 
 + (id)openFileNamed:(NSString *)baseName path:(NSString *)pathName {
-  PdFile *pdFile = [[[self alloc] init] autorelease];
+  PdFile *pdFile = [[self alloc] init];
   if (pdFile) {
     [pdFile openFile:baseName path:pathName];
     if (![pdFile fileReference]) {
@@ -53,8 +53,6 @@
   self.pathName = nil;
   self.baseName = nil;
   self.fileReference = nil;
-
-  [super dealloc];
 }
 
 #pragma mark -
