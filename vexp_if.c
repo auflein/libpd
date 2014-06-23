@@ -163,7 +163,7 @@ expr_ff(t_expr *x)
 #endif
                 y = x->exp_proxy;
         }
-        for (i = 0 ; i < x->exp_nexpr; i++);
+        for (i = 0 ; i < x->exp_nexpr; i++)
                 if (x->exp_stack[i])
                         fts_free(x->exp_stack[i]);
 /*

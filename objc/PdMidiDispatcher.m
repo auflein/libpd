@@ -53,7 +53,7 @@
 - (void)receiveNoteOn:(int)pitch withVelocity:(int)velocity forChannel:(int)channel {
   NSArray *listeners = [listenerMap objectForKey:[NSNumber numberWithInt:channel]];
   for (NSObject<PdMidiListener> *listener in listeners) {
-  if ([listener respondsToSelector:@selector(receiveNoteOn:pitch:velocity:)]) {
+  if ([listener respondsToSelector:@selector(receiveNoteOn:withVelocity:forChannel:)]) {
       [listener receiveNoteOn:pitch withVelocity:velocity forChannel:channel];
     } else {
       NSLog(@"Unhandled noteon on channel %d", channel);
@@ -64,7 +64,7 @@
 - (void)receiveControlChange:(int)value forController:(int)controller forChannel:(int)channel {
   NSArray *listeners = [listenerMap objectForKey:[NSNumber numberWithInt:channel]];
   for (NSObject<PdMidiListener> *listener in listeners) {
-	if ([listener respondsToSelector:@selector(receiveControlChange:controller:value:)]) {
+  if ([listener respondsToSelector:@selector(receiveControlChange:forController:forChannel:)]) {
       [listener receiveControlChange:value forController:controller forChannel:channel];
     } else {
       NSLog(@"Unhandled control change on channel %d", channel);
@@ -75,7 +75,7 @@
 - (void)receiveProgramChange:(int)value forChannel:(int)channel {
   NSArray *listeners = [listenerMap objectForKey:[NSNumber numberWithInt:channel]];
   for (NSObject<PdMidiListener> *listener in listeners) {
-    if ([listener respondsToSelector:@selector(receiveProgramChange:value:)]) {
+    if ([listener respondsToSelector:@selector(receiveProgramChange:forChannel:)]) {
       [listener receiveProgramChange:value forChannel:channel];
     } else {
       NSLog(@"Unhandled program change on channel %d", channel);
@@ -86,7 +86,7 @@
 - (void)receivePitchBend:(int)value forChannel:(int)channel {
   NSArray *listeners = [listenerMap objectForKey:[NSNumber numberWithInt:channel]];
   for (NSObject<PdMidiListener> *listener in listeners) {
-  if ([listener respondsToSelector:@selector(receivePitchBend:value:)]) {
+  if ([listener respondsToSelector:@selector(receivePitchBend:forChannel:)]) {
       [listener receivePitchBend:value forChannel:channel];
     } else {
       NSLog(@"Unhandled pitch bend on channel %d", channel);
@@ -97,7 +97,7 @@
 - (void)receiveAftertouch:(int)value forChannel:(int)channel {
   NSArray *listeners = [listenerMap objectForKey:[NSNumber numberWithInt:channel]];
   for (NSObject<PdMidiListener> *listener in listeners) {
-  if ([listener respondsToSelector:@selector(receiveAftertouch:value:)]) {
+  if ([listener respondsToSelector:@selector(receiveAftertouch:forChannel:)]) {
       [listener receiveAftertouch:value forChannel:channel];
     } else {
       NSLog(@"Unhandled aftertouch on channel %d", channel);
@@ -108,7 +108,7 @@
 - (void)receivePolyAftertouch:(int)value forPitch:(int)pitch forChannel:(int)channel {
   NSArray *listeners = [listenerMap objectForKey:[NSNumber numberWithInt:channel]];
   for (NSObject<PdMidiListener> *listener in listeners) {
-    if ([listener respondsToSelector:@selector(receivePolyAftertouch:pitch:value:)]) {
+    if ([listener respondsToSelector:@selector(receivePolyAftertouch:forPitch:forChannel:)]) {
       [listener receivePolyAftertouch:value forPitch:pitch forChannel:channel];
     } else {
       NSLog(@"Unhandled poly aftertouch on channel %d", channel);
