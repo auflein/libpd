@@ -27,4 +27,11 @@
 - (id)openNewInstance;                      // open a new instance of an existing PdFile
 - (void)closeFile;                          // close an opened pd file (also called in dealloc)
 
+#pragma mark - Sending messages to the local version of the given receiver (i.e. $0 prefixed)
+- (void)sendBangToReceiver:(NSString *)receiver;
+- (void)sendFloat:(float)value toReceiver:(NSString *)receiver;
+- (void)sendSymbol:(NSString *)symbol toReceiver:(NSString *)receiver;
+- (void)sendList:(NSArray *)list toReceiver:(NSString *)receiver;
+- (void)sendMessage:(NSString *)message withArguments:(NSArray *)args toReceiver:(NSString *)receiver;
+
 @end

@@ -92,4 +92,30 @@
   self.baseName, self.dollarZero, (bool) self.fileReference];
 }
 
+#pragma mark -
+#pragma mark - Sending messages
+- (NSString *)localReceiver:(NSString *)receiver {
+    return [NSString stringWithFormat:@"%@%@", @(self.dollarZero), receiver];
+}
+
+- (void)sendBangToReceiver:(NSString *)receiver {
+    [PdBase sendBangToReceiver:[self localReceiver:receiver]];
+}
+
+- (void)sendFloat:(float)value toReceiver:(NSString *)receiver {
+    [PdBase sendFloat:value toReceiver:[self localReceiver:receiver]];
+}
+
+- (void)sendSymbol:(NSString *)symbol toReceiver:(NSString *)receiver {
+    [PdBase sendSymbol:symbol toReceiver:[self localReceiver:receiver]];
+}
+
+- (void)sendList:(NSArray *)list toReceiver:(NSString *)receiver {
+    [PdBase sendList:list toReceiver:[self localReceiver:receiver]];
+}
+
+- (void)sendMessage:(NSString *)message withArguments:(NSArray *)args toReceiver:(NSString *)receiver {
+    [PdBase sendMessage:message withArguments:args toReceiver:[self localReceiver:receiver]];
+}
+
 @end
