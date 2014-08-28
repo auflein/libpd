@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C219099719AF3F8D004BAF92 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C219099619AF3F8D004BAF92 /* AudioUnit.framework */; };
 		C21B8D6A1977CD910062F917 /* PdiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = C21B8D691977CD910062F917 /* PdiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C21B8D801977CDDD0062F917 /* d_arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E829FF412EEFDED0053280E /* d_arithmetic.c */; };
 		C21B8D811977CDDD0062F917 /* d_array.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E829FF512EEFDED0053280E /* d_array.c */; };
@@ -305,6 +306,7 @@
 		5828C8B31409C8C600F8B9AC /* PdDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PdDispatcher.h; sourceTree = "<group>"; };
 		5828C8B41409C8C600F8B9AC /* PdDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PdDispatcher.m; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C219099619AF3F8D004BAF92 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		C21B8D651977CD910062F917 /* PdiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PdiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21B8D681977CD910062F917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C21B8D691977CD910062F917 /* PdiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PdiOS.h; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C219099719AF3F8D004BAF92 /* AudioUnit.framework in Frameworks */,
 				C21B8DE21977CEC30062F917 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +374,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C219099619AF3F8D004BAF92 /* AudioUnit.framework */,
 				C21B8DE31977CECF0062F917 /* Accelerate.framework */,
 				C21B8DE11977CEC30062F917 /* Accelerate.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,

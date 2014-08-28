@@ -11,7 +11,8 @@
 #import "PdAudioUnit.h"
 #import "PdBase.h"
 #import "AudioHelpers.h"
-#import <AudioToolbox/AudioToolbox.h>
+
+#import <AudioUnit/AudioUnit.h>
 
 static const AudioUnitElement kInputElement = 1;
 static const AudioUnitElement kOutputElement = 0;
