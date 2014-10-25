@@ -22,7 +22,7 @@
         rotation = [NSMutableArray arrayWithCapacity:polyphony];
         for (NSUInteger i = 0; i<polyphony; i++) {
             PdFile *file = [PdFile openFileNamed:[NSString stringWithFormat:@"%@.pd", fileName]
-                                            path:[NSBundle mainBundle].bundlePath];
+                                            path:[NSBundle mainBundle].resourcePath];
             [rotation addObject:file];
         }
     }

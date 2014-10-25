@@ -22,3 +22,5 @@ FOUNDATION_EXPORT const unsigned char PdOSXVersionString[];
 #import <PdOSX/PdFile.h>
 #import <PdOSX/PdDispatcher.h>
 #import <PdOSX/PdMidiDispatcher.h>
+#import <PdOSX/PdPoly.h>
+#import <PdOSX/AudioHelpers.h>
